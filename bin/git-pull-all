@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Per a cada directory de la carpeta actual, mirar si es un repository git y fer un
+# Com fer per a demanar la contraseña una vegada?
+# git pull origin master
+
+
+for d in `find . -type d`
+do
+    cd $d
+    git pull origin master
+    cd ..
+done
+
+
