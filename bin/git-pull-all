@@ -4,12 +4,34 @@
 # Com fer per a demanar la contraseña una vegada?
 # git pull origin master
 
+user=`git config user.name`
 
-for d in `find . -type d`
-do
-    cd $d
-    git pull origin master
-    cd ..
-done
+function credentials {
+  echo "> Setting credentials"
+  echo -n ">> Username [$user]: "
+  read user_input
 
+  if [ ! -z "$user_input" ]; then
+    user=$user_input;
+  fi
 
+  git config --global user.name "$user"
+  #git config --global credential.helper cache
+}
+
+function update_repos {
+  echo "> Updating repos"
+  for D in *; do
+    if [ -d "${D}" ]; then
+      cd $D
+      if [ -d ".git" ]; then
+        echo ">> Pulling $D"
+        git pull origin master
+      fi
+      cd ..
+    fi
+  done
+}
+
+credentials
+update_repos

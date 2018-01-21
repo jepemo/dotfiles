@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DF_DIR=.dotfiles_jepemo
+DF_DIR=~/.dotfiles_jepemo
 
 
 if [ -z "$1" ] || ([ "$1" != "ubuntu" ] && [ "$1" != "arch" ]); then
@@ -23,3 +23,5 @@ function copy_common {
     cp -R bin $DF_DIR/bin
 }
 
+create_dir
+copy_common
