@@ -2,9 +2,14 @@
 
 # Matar proceso existente
 # ps aux | grep "nohup docker daemon"
+PID=`ps aux | grep "nohup docker daemon" | grep su | awk '{print $2}'`
+if [ ! -z "$PID" ]; then
+  kill -9 $PID
+fi
 
 # Primer comprobar si esta started
 sudo service docker stop
 
 # Que no genere el nohup.out....
 # sudo nohup docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock &
+sudo nohup docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock </dev/null &>/dev/null &
