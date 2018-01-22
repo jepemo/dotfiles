@@ -15,7 +15,7 @@ function credentials {
     user=$user_input;
   fi
 
-  git config --global user.name "$user"
+  #git config --global user.name "$user"
   #git config --global credential.helper cache
 }
 

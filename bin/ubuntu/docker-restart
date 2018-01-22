@@ -4,7 +4,7 @@
 # ps aux | grep "nohup docker daemon"
 PID=`ps aux | grep "nohup docker daemon" | grep su | awk '{print $2}'`
 if [ ! -z "$PID" ]; then
-  kill -9 $PID
+  sudo kill -9 $PID
 fi
 
 # Primer comprobar si esta started
