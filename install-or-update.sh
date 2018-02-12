@@ -28,7 +28,7 @@ function copy_common {
     echo "> Copying common files"
     mkdir $DF_DIR/bin
     for f in $BIN_COMMON_FILES; do
-      echo ">> Copying $f"
+      echo ">> Copying $f to $f $DF_DIR/bin/"
       cp -Rf bin/$f $DF_DIR/bin/
     done
 
@@ -43,8 +43,8 @@ function copy_os {
   if [ "$OS_NAME" == "ubuntu" ]; then
     UBUNTU_FILES=bin/ubuntu/*
     for f in $UBUNTU_FILES; do
-      echo ">> Copying $f"
-      cp -Rf $f $DF_DIR/bin
+      echo ">> Copying $f to $DF_DIR/bin/"
+      cp -Rf $f $DF_DIR/bin/
     done
   fi
 }
@@ -53,7 +53,7 @@ function add_includes {
   echo "> Adding bash includes"
   exists=`cat ~/.bashrc | grep bash_includes`
   if [ -z "$exists" ]; then
-    echo -ne "\n[[ -s \"~/.bash_includes.sh\" ]] && source \"~/.bash_includes.sh\"\n" >> ~/.bashrc
+    echo -ne "\n[ -s ~/.bash_includes.sh ] && source \"~/.bash_includes.sh\"\n" >> ~/.bashrc
   fi
 }
 
