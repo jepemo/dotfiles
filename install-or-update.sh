@@ -53,7 +53,7 @@ function add_includes {
   echo "> Adding bash includes"
   exists=`cat ~/.bashrc | grep bash_includes`
   if [ -z "$exists" ]; then
-    echo -ne "\n[ -s ~/.bash_includes.sh ] && source \"~/.bash_includes.sh\"\n" >> ~/.bashrc
+    echo -ne "\n[ -s $HOME/.bash_includes.sh ] && source \"$HOME/.bash_includes.sh\"\n" >> ~/.bashrc
   fi
 }
 
