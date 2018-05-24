@@ -25,4 +25,5 @@ git pull origin master
 Inpired by:
   - [cowboy dotfiles](https://github.com/cowboy/dotfiles)
   - I general: [dotfiles in Github](https://dotfiles.github.io/)
+  - [Roguh Personal configuration files for some Linux programs](https://github.com/roguh/confs)
   - Add: [fish](https://fishshell.com/) and [Pure](https://github.com/rafaelrinaldi/pure)
