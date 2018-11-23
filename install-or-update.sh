@@ -53,8 +53,16 @@ function add_includes {
   echo "> Adding bash includes"
   exists=`cat ~/.bashrc | grep bash_includes`
   if [ -z "$exists" ]; then
-    echo -ne "\n[ -s $HOME/.bash_includes.sh ] && source \"$HOME/.bash_includes.sh\"\n" >> ~/.bashrc
+    echo -ne "\n[ -s $HOME/.bash_includes ] && source \"$HOME/.bash_includes\"\n" >> ~/.bashrc
   fi
+  
+  echo "> Adding bash includes"
+  exists=`cat ~/.bashrc | grep bashrc_custom`
+  if [ -z "$exists" ]; then
+    echo -ne "\n[ -s $HOME/.bashrc_custom ] && source \"$HOME/.bashrc_custom\"\n" >> ~/.bashrc
+  fi
+  
+  echo "> Adding bash aliases"
 }
 
 function restart_shell {
