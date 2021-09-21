@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-export DF_DIR=~/.dotfiles
+
+# Install
+
+# export DF_DIR=~/src/dotfiles
 #export OSNAME=
 #export BIN_COMMON_FILES=git-pull-all
 #export CONF_FILES=".bash_includes.sh"
@@ -70,25 +73,25 @@ export DF_DIR=~/.dotfiles
 #     source ~/.bashrc
 # }
 
-link_dotfiles() {
-  for filepath in "$DF_DIR"/*; do
-    filename=`basename $filepath`
-    target="$HOME/.$filename";
+# link_dotfiles() {
+#   for filepath in "$DF_DIR"/*; do
+#     filename=`basename $filepath`
+#     target="$HOME/.$filename";
 
-    if [ ! -L "$target" ]; then
-      case "$filename" in
-        install-or-update.sh | LICENSE | README.md | bin | conf | zsh)
-          # Do nothing
-          ;;
-      *)
-        echo "Linking $filename";
-        #echo "ln -s \"$filepath\" \"$target\"";
-        ln -s "$filepath" "$target";
-        ;;
-      esac
-    fi
-  done
-}
+#     if [ ! -L "$target" ]; then
+#       case "$filename" in
+#         install-or-update.sh | LICENSE | README.md | bin | conf | zsh | rcrc)
+#           # Do nothing
+#           ;;
+#       *)
+#         echo "Linking $filename";
+#         #echo "ln -s \"$filepath\" \"$target\"";
+#         ln -s "$filepath" "$target";
+#         ;;
+#       esac
+#     fi
+#   done
+# }
 
 
 #get_os
@@ -96,5 +99,5 @@ link_dotfiles() {
 # copy_common
 # copy_os
 # add_includes
-link_dotfiles
+# link_dotfiles
 # restart_shell
