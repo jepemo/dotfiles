@@ -1,4 +1,4 @@
-BASE="$HOME/dotfiles/zsh"
+BASE="$HOME/.dotfiles/zsh"
 
 for file in "$BASE"/*.zsh
 do

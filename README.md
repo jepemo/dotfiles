@@ -14,7 +14,8 @@ bash ~/.dotfiles/install-or-update.sh
 ## Dev
 
 ```bash
-rm -Rf ~/.dotfiles && cp -Rf dotfiles ~/.dotfiles && ~/.dotfiles/install-or-update.sh
+rm -Rf ~/.dotfiles && cp -Rf $HOME/src/dotfiles ~/.dotfiles && ~/.dotfiles/install.sh
+rm -Rf ~/.dotfiles && cp -Rf $HOME/src/dotfiles ~/.dotfiles && cd ~/.dotfiles && ./install.sh && cd -
 ```
 
 ## Links and resources

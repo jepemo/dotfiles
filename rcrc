@@ -1,4 +1,3 @@
-#DOTFILES_DIRS=$HOME/code/personal/dotfiles
-DOTFILES_DIRS=$HOME/.dotfiles
-EXCLUDES="install-or-update.sh LICENSE README.md bin conf zsh"
+DOTFILES_DIRS="~/.dotfiles $HOME/src/dotfiles"
+EXCLUDES="install.sh LICENSE README.md rcrc bin conf zsh"
 TAGS="nvim tmux zsh python elixir rust"
