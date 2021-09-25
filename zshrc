@@ -5,7 +5,7 @@ do
   source "$file"
 done
 
-export EDITOR=nano
+export EDITOR=vim
 
 # Aliases {{{
 peek() { tmux split-window -p 33 $EDITOR $@ || exit; }
@@ -15,8 +15,13 @@ alias ls="ls -FGh"
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
+alias cp="cp -iv"
+alias rm="rm -iv"
+alias mv="mv -iv"
 alias du="du -cksh"
 alias df="df -h"
+
+alias ...="cd ../.."
 # }}}
 
 # GIT {{{
