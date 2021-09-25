@@ -7,14 +7,26 @@ done
 
 export EDITOR=nano
 
-# Tmux aliases
+# Aliases {{{
 peek() { tmux split-window -p 33 $EDITOR $@ || exit; }
 q(){ vim "$(readlink ~/.zshrc)" }
-
-# Aliases
+alias qq="cd . && source ~/.zshrc"
 alias ls="ls -FGh"
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
 alias du="du -cksh"
 alias df="df -h"
+# }}}
+
+# GIT {{{
+function g {
+  if [[ $# > 0 ]]; then
+    git "$@"
+  else
+    git status
+  fi
+}
+# }}}
+
+. $HOME/.asdf/asdf.sh

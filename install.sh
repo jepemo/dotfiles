@@ -33,23 +33,30 @@ install_basic_packages() {
 
   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sudo apt install \
+      curl \
+      git \
       rcm \
       tmux \
       zsh;
   elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo "Install in MacOSX"
+
+    brew install asdf
   fi
+}
+
+install_asdf() {
+  rm -Rf ~/.asdf
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 }
 
 link_dotfiles() {
   _s "Linking dotfiles"
-  # rcdn
-  # export RCRC=rcrc
-  cp -fu rcrc ~/.rcrc
+  cp -f rcrc ~/.rcrc >/dev/null 2>&1
   rcup -v -d .
-  # rcup -v
 }
 
 #install_basic_packages
+#install_asdf
 link_dotfiles
 
