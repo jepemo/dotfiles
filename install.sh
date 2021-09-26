@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 _s() { echo -ne "[\e[32m*\e[0m] \e[1m$1\e[0m\n"; }
 
 

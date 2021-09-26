@@ -22,6 +22,8 @@ alias du="du -cksh"
 alias df="df -h"
 
 alias ...="cd ../.."
+
+alias gh-get="bash ~/.dotfiles/bin/config_github.sh"
 # }}}
 
 # GIT {{{
