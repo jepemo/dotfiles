@@ -30,6 +30,11 @@ alias ...="cd ../.."
 alias gh-get="bash ~/.dotfiles/bin/config_github.sh"
 # }}}
 
+# UFG Aliases {{{
+alias ufg-close='git branch | fzf | xargs git branch -D'
+alias ufg-co='git branch | fzf | xargs git checkout'
+# }}}
+
 # GIT {{{
 function g {
   if [[ $# > 0 ]]; then
