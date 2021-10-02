@@ -38,8 +38,8 @@ alias gh-get="bash ~/.dotfiles/bin/config_github.sh"
 # }}}
 
 # UFG Aliases {{{
-alias ufg-close='git branch | fzf | xargs git branch -D'
-alias ufg-co='git branch | fzf | xargs git checkout'
+alias zxc-close='git branch | fzf | xargs git branch -D'
+alias zxc-co='git branch | fzf | xargs git checkout'
 # }}}
 
 # GIT {{{
