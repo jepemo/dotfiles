@@ -58,6 +58,7 @@ thunderbird"
 
   _cmd "$APT_INSTALL \
 apt-transport-https \
+build-essential \
 ca-certificates \
 cowsay \
 curl \
