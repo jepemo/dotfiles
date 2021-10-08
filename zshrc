@@ -19,9 +19,11 @@ export PROMPT="%F{014}%n%f@ %B%F{011}%~%f%b (%5v) $"$'\n'"| => "
 
 # Aliases {{{
 peek() { tmux split-window -p 33 $EDITOR $@ || exit; }
+# dotfiles workflow
 q(){ vim "$(readlink ~/.zshrc)" }
 alias qq="cd . && source ~/.zshrc"
 alias qqq="cd ~/.dotfiles && git add . && git commit -a && git push origin master && cd -"
+# ----
 alias ls="ls -FGh --color"
 alias ll="ls -l"
 alias la="ls -a"
