@@ -115,11 +115,18 @@ setup_git() {
   git config --global credential.helper cache
 }
 
-install_dotfiles() {
-  _s "Installing dotfiles"
+#install_dotfiles() {
+#  _s "Installing dotfiles"
+#
+#  _cmd "mkdir -p ~/src"
+#  _git_clone "https://github.com/jepemo/dotfiles" "$SRC_DIR/dotfiles"
+#}
 
-  _cmd "mkdir -p ~/src"
-  _git_clone "https://github.com/jepemo/dotfiles" "$SRC_DIR/dotfiles"
+install_asdf_plugins() {
+  _s "Installing asdf plugins"
+
+  _cmd "asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git"
+  _cmd "asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git"
 }
 
 title

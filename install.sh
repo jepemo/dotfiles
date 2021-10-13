@@ -50,6 +50,8 @@ install_basic_packages() {
 install_asdf() {
   rm -Rf ~/.asdf
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+  # Check and add to the path
+  # . $HOME/.asdf/asdf.sh
 }
 
 link_dotfiles() {
