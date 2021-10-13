@@ -22,11 +22,8 @@ peek() { tmux split-window -p 33 $EDITOR $@ || exit; }
 # dotfiles workflow
 q(){ vim "$(readlink ~/.zshrc)" }
 alias qq="cd . && source ~/.zshrc"
-<<<<<<< HEAD
 alias qqq="cd ~/.dotfiles && git add . && git commit -a && git pull origin master && git push origin master && cd -"
 # ----
-=======
->>>>>>> acab632ee0f8dcac277bb187c4b907b446bd6d84
 alias ls="ls -FGh --color"
 alias ll="ls -l"
 alias la="ls -a"
