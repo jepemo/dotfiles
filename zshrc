@@ -44,6 +44,10 @@ alias zxc-close='git branch | fzf | xargs git branch -D'
 alias zxc-co='git branch | fzf | xargs git checkout'
 # }}}
 
+# Ubuntu FIXES {{{
+alias fix-ubuntu-reset-sound="pulseaudio -k && sudo alsa force-reload"
+# }}}
+
 # GIT {{{
 function g {
   if [[ $# > 0 ]]; then

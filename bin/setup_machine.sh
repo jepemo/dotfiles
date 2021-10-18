@@ -96,6 +96,9 @@ $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list > /de
   _cmd "sudo groupadd -f docker"
   _cmd "sudo usermod -aG docker $SUDO_USER"
   _cmd "sudo systemctl restart docker"
+
+  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  sudo chmod +x /usr/local/bin/docker-compose
 }
 
 install_vscode() {
@@ -127,6 +130,8 @@ install_asdf_plugins() {
 
   _cmd "asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git"
   _cmd "asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git"
+  # Erlang deps
+  #sudo apt-get -y install build-essential autoconf m4 libncurses5-dev libwxgtk3.0-gtk3-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev openjdk-11-jdk
 }
 
 title
