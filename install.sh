@@ -35,6 +35,7 @@ install_basic_packages() {
 
   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sudo apt install \
+      bat \
       curl \
       git \
       rcm \

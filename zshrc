@@ -36,6 +36,7 @@ alias df="df -h"
 
 alias ...="cd ../.."
 
+alias cat="batcat"
 alias gh-get="bash ~/.dotfiles/bin/config_github.sh"
 # }}}
 
