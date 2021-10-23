@@ -112,6 +112,11 @@ install_vscode() {
   sudo apt install code # or code-insiders
 }
 
+install_alacritty() {
+  sudo add-apt-repository ppa:mmstick76/alacritty
+  sudo apt install alacritty
+}
+
 setup_git() {
   git config --global user.email "you@example.com"
   git config --global user.name "Tu Nombre"
@@ -136,12 +141,13 @@ install_asdf_plugins() {
 
 title
 am_i_root
-#upgrade_and_install_system
-#install_dotfiles
-#install_docker
-install_vscode
-#clean_system
-#change_to_zsh
+# upgrade_and_install_system
+# install_dotfiles
+# install_docker
+# install_vscode
+# install_alacritty
+# clean_system
+# change_to_zsh
 
 
 # configure zsh
