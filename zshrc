@@ -24,7 +24,7 @@ q(){ vim "$(readlink ~/.zshrc)" }
 alias qq="cd . && source ~/.zshrc"
 alias qqq="cd ~/.dotfiles && git add . && git commit -a && git pull origin master && git push origin master && cd -"
 # ----
-alias ls="ls -FGh --color"
+alias ls="exa -FGh --color=auto"
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"

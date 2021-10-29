@@ -37,6 +37,7 @@ install_basic_packages() {
     sudo apt install \
       bat \
       curl \
+      exa \
       git \
       rcm \
       tmux \
