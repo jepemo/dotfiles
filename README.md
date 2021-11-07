@@ -8,7 +8,7 @@ For install or update
 ```bash
 # First Installation
 git clone https://github.com/jepemo/dotfiles ~/.dotfiles
-bash ~/.dotfiles/install-or-update.sh
+bash ~/.dotfiles/install.sh
 ```
 
 ## Dev
