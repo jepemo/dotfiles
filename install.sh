@@ -56,6 +56,10 @@ install_asdf() {
   # . $HOME/.asdf/asdf.sh
 }
 
+install_rust() {
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+}
+
 link_dotfiles() {
   _s "Linking dotfiles"
   cp -f rcrc ~/.rcrc >/dev/null 2>&1
@@ -64,5 +68,6 @@ link_dotfiles() {
 
 #install_basic_packages
 #install_asdf
+#install_rust
 link_dotfiles
 
