@@ -60,3 +60,4 @@ function g {
 # }}}
 
 . $HOME/.asdf/asdf.sh
+. $HOME/.cargo/env
