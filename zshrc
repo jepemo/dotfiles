@@ -1,8 +1,7 @@
 # tmux {{{
 # Copied from *gabebw* dotfiles
-# If exists a tmux session starts the environment inside.
+# If exists a tmux session starts the environment inside otherwise it creates a new one.
 connect_to_most_recent_tmux_session() {
-  # echo "$TMUX"
   if _not_in_tmux && _not_any_tmux_sessions; then
     tmux new -s XYZ
   elif _not_in_tmux && _any_tmux_sessions; then
@@ -26,10 +25,6 @@ _most_recent_tmux_session(){
 _not_in_tmux() {
   [[ -z "$TMUX" ]]
 }
-
-# _not_in_tmux() {
-#   [[ -z "$TMUX" ]]
-# }
 
 _not_any_tmux_sessions() {
   [[ ! -n "$(tmux ls 2>/dev/null)" ]]
