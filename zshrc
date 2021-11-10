@@ -1,11 +1,65 @@
-BASE="$HOME/.dotfiles/zsh"
+# tmux {{{
+# Copied from *gabebw* dotfiles
+# If exists a tmux session starts the environment inside.
+connect_to_most_recent_tmux_session() {
+  # echo "$TMUX"
+  if _not_in_tmux && _not_any_tmux_sessions; then
+    tmux new -s XYZ
+  elif _not_in_tmux && _any_tmux_sessions; then
+    tmux attach -t "$(_most_recent_tmux_session)"
+  else
+    echo ""
+    echo "/|\(;,;)/|\  ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn"
+    echo ""
+  fi
+}
 
-for file in "$BASE"/*.zsh
-do
-  source "$file"
-done
+# Returns the name of the most recent tmux session, sorted by time the session
+# was last attached.
+_most_recent_tmux_session(){
+  tmux list-sessions -F "#{session_last_attached} #{session_name}" | \
+    sort -r | \
+    cut -d' ' -f2 | \
+    head -1
+}
 
-export EDITOR=vim
+_not_in_tmux() {
+  [[ -z "$TMUX" ]]
+}
+
+# _not_in_tmux() {
+#   [[ -z "$TMUX" ]]
+# }
+
+_not_any_tmux_sessions() {
+  [[ ! -n "$(tmux ls 2>/dev/null)" ]]
+}
+
+_any_tmux_sessions() {
+  [[ -n "$(tmux ls 2>/dev/null)" ]]
+}
+
+inside_ssh(){
+  [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]
+}
+
+in_vs_code(){ [[ "$TERM_PROGRAM" == "vscode" ]] }
+
+if ! inside_ssh && ! in_vs_code; then
+  connect_to_most_recent_tmux_session
+fi
+# }}}
+
+
+# BASE="$HOME/.dotfiles/zsh"
+
+# for file in "$BASE"/*.zsh
+# do
+#   source "$file"
+# done
+
+export VISUAL=vim
+export EDITOR=$VISUAL
 
 # General {{{
 # Bash Version
