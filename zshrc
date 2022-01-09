@@ -112,11 +112,11 @@ function g {
 # ZSH PLUGINS {{{
 
 # Download Znap, if it's not there yet.
-[[ -f ~/Git/zsh-snap/znap.zsh ]] ||
+[[ -f ~/.zsh/zsh-snap/znap.zsh ]] ||
 	git clone --depth 1 -- \
-		https://github.com/marlonrichert/zsh-snap.git ~/Git/zsh-snap
+		https://github.com/marlonrichert/zsh-snap.git ~/.zsh/zsh-snap
 
-source ~/Git/zsh-snap/znap.zsh  # Start Znap
+source ~/.zsh/zsh-snap/znap.zsh  # Start Znap
 
 # ZSH own prompts
 # `znap prompt` makes your prompt visible in just 15-40ms!
