@@ -53,7 +53,7 @@ fi
 #   source "$file"
 # done
 
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR=$VISUAL
 
 # General {{{
@@ -128,11 +128,11 @@ znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 
 # `znap eval` caches and runs any kind of command output for you.
-znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
+# znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
              
 # `znap function` lets you lazy-load features you don't always need.
-znap function _pyenv pyenvn 'eval "$( pyenv init - --no-rehash )"'
-compctl -K    _pyenv pyenv
+# znap function _pyenv pyenvn 'eval "$( pyenv init - --no-rehash )"'
+# compctl -K    _pyenv pyenv
 
 # }}}
 

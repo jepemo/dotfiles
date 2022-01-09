@@ -39,13 +39,14 @@ install_basic_packages() {
       curl \
       exa \
       git \
+      neovim \ 
       rcm \
       tmux \
       zsh;
   elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo "Install in MacOSX"
 
-    brew install asdf
+    brew install asdf neovim
   fi
 }
 
