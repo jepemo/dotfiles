@@ -73,6 +73,7 @@ q(){ $VISUAL "$(readlink ~/.zshrc)" }
 alias qq="cd . && source ~/.zshrc"
 alias qqq="cd ~/.dotfiles && git add . && git commit -a && git pull origin master && git push origin master && cd -"
 # ----
+alias v=$VISUAL
 alias ls="exa -Fh --color=auto"
 alias ll="ls -l"
 alias la="ls -a"
