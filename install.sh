@@ -39,6 +39,7 @@ install_basic_packages() {
       curl \
       exa \
       git \
+      kitty \
       neovim \ 
       rcm \
       tmux \
