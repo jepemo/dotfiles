@@ -124,8 +124,8 @@ source ~/.zsh/zsh-snap/znap.zsh  # Start Znap
 # znap prompt sindresorhus/pure
 
 # `znap source` automatically downloads and starts your plugins.
-znap source marlonrichert/zsh-autocomplete
-znap source zsh-users/zsh-autosuggestions
+# znap source marlonrichert/zsh-autocomplete
+# znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 
 # `znap eval` caches and runs any kind of command output for you.
