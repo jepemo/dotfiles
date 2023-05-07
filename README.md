@@ -38,6 +38,7 @@ qqq
   - [gabebw dotfiles](https://github.com/gabebw/dotfiles)
     - [Old simple version](https://github.com/gabebw/dotfiles/tree/7c5ba2fd230df4dd2432019c72c3def2b75f1d45)
   - [cowboy dotfiles](https://github.com/cowboy/dotfiles)
+  - [Mitchell Hashimoto dotfiles](https://github.com/mitchellh/dotfiles/)
   - [thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
   - [Upcase - Intro to Dotfiles](https://thoughtbot.com/upcase/videos/intro-to-dotfiles)
   - [Dotly](https://github.com/CodelyTV/dotly)
