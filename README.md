@@ -1,20 +1,36 @@
 # dotfiles
-My Ubuntu dotfiles
+My MacOSX/Linux .dotfiles
 
 ## Installation
 
 For install or update
 
 ```bash
-# First Installation
+# First Installation, download dotfiles
 git clone https://github.com/jepemo/dotfiles ~/.dotfiles
-bash ~/.dotfiles/install.sh
+
+# Installation is very specific. 
+# Now is only enabled the step of installing the dotfiles with the "rc" tool
+# bash ~/.dotfiles/install.sh
 ```
 
-## Dev
+## Adding new dotfiles
 
 ```bash
-rm -Rf ~/.dotfiles && cp -Rf $HOME/src/dotfiles ~/.dotfiles && cd ~/.dotfiles && ./install.sh && cd -
+mkrc -d ~/.dotfiles FILE_PATH_NEW_DOTFILE
+```
+
+## Useful commands
+
+```bash
+# editor/neovim
+v
+# Edit zshrc with nvim
+q
+# Reload environment
+qq
+# Upload changes to .dotfiles repo
+qqq
 ```
 
 ## Links and resources
