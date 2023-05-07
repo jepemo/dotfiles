@@ -139,6 +139,16 @@ znap source zsh-users/zsh-syntax-highlighting
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.cargo/env
-. $HOME/.poetry/env
 
-export PATH="$HOME/.poetry/bin:$PATH"
+# Python poetry
+# . $HOME/.poetry/env
+# export PATH="$HOME/.poetry/bin:$PATH"
+
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
+
