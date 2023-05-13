@@ -1,5 +1,9 @@
 let g:vim_home_path = "~/.vim"
 
+" General key remaps
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
 " ============================================================================
 " PLUGINS {{{
 " ===========================================================================
@@ -16,6 +20,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 " Plug 'doums/darcula'
 Plug 'elixir-editors/vim-elixir'
 Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 " }}}
@@ -25,3 +30,7 @@ call plug#end()
 " Set the root directory to the parent of the current opened file
 let g:NERDTreeChDirMode = 2 
 :nnoremap <C-e> :NERDTreeToggle<CR>
+
+" Nerdcommenter
+filetype plugin on
+
