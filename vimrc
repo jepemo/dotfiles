@@ -21,6 +21,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'elixir-editors/vim-elixir'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 " }}}
@@ -33,4 +34,11 @@ let g:NERDTreeChDirMode = 2
 
 " Nerdcommenter
 filetype plugin on
+
+" Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 
