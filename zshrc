@@ -87,7 +87,7 @@ alias df="df -h"
 
 alias ...="cd ../.."
 
-alias cat="batcat --theme=\"TwoDark\""
+alias cat="bat --theme=\"TwoDark\""
 alias gh-get="bash ~/.dotfiles/bin/config_github.sh"
 # }}}
 
@@ -138,8 +138,8 @@ znap source zsh-users/zsh-syntax-highlighting
 
 # }}}
 
-. $HOME/.asdf/asdf.sh
-. $HOME/.cargo/env
+#. $HOME/.asdf/asdf.sh
+#. $HOME/.cargo/env
 
 # Python poetry
 # . $HOME/.poetry/env

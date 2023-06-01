@@ -62,7 +62,24 @@ install_rust() {
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 }
 
+install_nix() {
+  sh <(curl -L https://nixos.org/nix/install) --daemon
+}
+
+install_tools() {
+  nix-env -i exa neovim asdf-vm bat tmux
+}
+
+
+install_tools_adjustments() {
+  _s "Installing vim-plugs"
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+}
+
 link_dotfiles() {
+  _s "Installing RCM"
+  nix-env -i rcm
   _s "Linking dotfiles"
   cp -f rcrc ~/.rcrc >/dev/null 2>&1
   rcup -v -d .
@@ -71,5 +88,8 @@ link_dotfiles() {
 #install_basic_packages
 #install_asdf
 #install_rust
-link_dotfiles
+#install_nix
+#install_tools
+#install_tools_adjustments
+#link_dotfiles
 
