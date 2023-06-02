@@ -100,6 +100,13 @@ alias zxc-co='git branch | fzf | xargs git checkout'
 alias fix-ubuntu-reset-sound="pulseaudio -k && sudo alsa force-reload"
 # }}}
 
+# MacOsX Portability tools {{{
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias strace='sudo dtruss'
+  alias ldd='otool -L'
+fi
+# }}}
+
 # GIT {{{
 function g {
   if [[ $# > 0 ]]; then
