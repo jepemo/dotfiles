@@ -13,6 +13,8 @@ connect_to_most_recent_tmux_session() {
   fi
 }
 
+
+
 # Returns the name of the most recent tmux session, sorted by time the session
 # was last attached.
 _most_recent_tmux_session(){
