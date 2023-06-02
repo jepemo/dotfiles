@@ -46,13 +46,6 @@ fi
 # }}}
 
 
-# BASE="$HOME/.dotfiles/zsh"
-
-# for file in "$BASE"/*.zsh
-# do
-#   source "$file"
-# done
-
 export VISUAL=nvim
 export EDITOR=$VISUAL
 
