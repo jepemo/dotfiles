@@ -150,9 +150,12 @@ fi
 # End Nix
 
 
-# ASDF
+# ASDF {{{
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   . $HOME/.asdf/asdf.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   . $HOME/.nix-profile/share/asdf-vm/asdf.sh
 fi
+export PATH=$HOME/.asdf/shims:$PATH
+# }}}
+
