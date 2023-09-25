@@ -82,7 +82,7 @@ alias df="df -h"
 
 alias ...="cd ../.."
 
-alias cat="bat --theme=\"TwoDark\""
+alias cat="bat --theme=\"TwoDark\" --paging=never"
 alias gh-get="bash ~/.dotfiles/bin/config_github.sh"
 # }}}
 
