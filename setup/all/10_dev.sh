@@ -2,5 +2,6 @@
 
 nix profile install \
 	nixpkgs#bat \
-	nixpkgs#elixir
+	nixpkgs#elixir \
+	nixpkgs#python3
 
