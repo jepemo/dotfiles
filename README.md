@@ -46,3 +46,4 @@ qqq
   - [Roguh Personal configuration files for some Linux programs](https://github.com/roguh/confs)
   - [Square - Config files for vim and tmux.](https://github.com/square/maximum-awesome)
   - [A bunch of vim shortcuts, colors, and bundles to make your life easier](https://github.com/cassidoo/vim-up)
+  - [Nix inspiration to create a new environment with Nix tools](https://davi.sh/blog/2023/12/what-i-like-about-nix/)
