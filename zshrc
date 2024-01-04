@@ -1,3 +1,9 @@
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+
+# End Nix
 # tmux {{{
 # Copied from *gabebw* dotfiles
 # If exists a tmux session starts the environment inside otherwise it creates a new one.
@@ -142,12 +148,6 @@ znap source zsh-users/zsh-syntax-highlighting
 
 
 #. $HOME/.cargo/env
-
-# Nix
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
-# End Nix
 
 
 # ASDF {{{
