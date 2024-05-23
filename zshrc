@@ -160,6 +160,10 @@ export PATH=$HOME/.asdf/shims:$PATH
 # }}}
 
 
+# DIRENV {{{
+eval "$(direnv hook zsh)"
+# }}}
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jepemo/data/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jepemo/data/google-cloud-sdk/path.zsh.inc'; fi
 
