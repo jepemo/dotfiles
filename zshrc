@@ -116,6 +116,8 @@ function g {
     git status
   fi
 }
+
+alias gup='git pull && git submodule update --recursive --remote'
 # }}}
 
 
