@@ -86,6 +86,7 @@ alias rm="rm -iv"
 alias mv="mv -iv"
 alias du="du -cksh"
 alias df="df -h"
+alias l="ls"
 
 alias ...="cd ../.."
 
