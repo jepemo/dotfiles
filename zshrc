@@ -119,7 +119,7 @@ function g {
   fi
 }
 
-alias gup='git pull && git submodule update --recursive --remote'
+alias gup='git stash && git pull && git submodule foreach --recursive git stash && git submodule update --recursive --remote'
 # }}}
 
 
