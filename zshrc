@@ -174,3 +174,5 @@ if [ -f '/Users/jepemo/data/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jep
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jepemo/data/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jepemo/data/google-cloud-sdk/completion.zsh.inc'; fi
+
+. "$HOME/.local/share/../bin/env"

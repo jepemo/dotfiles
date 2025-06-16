@@ -66,6 +66,10 @@ install_nix() {
   sh <(curl -L https://nixos.org/nix/install) --daemon
 }
 
+install_python() {
+	curl -LsSf https://astral.sh/uv/install.sh | sh
+}
+
 install_tools() {
   nix-env -i exa neovim asdf-vm bat tmux
 }
@@ -90,6 +94,7 @@ link_dotfiles() {
 #install_rust
 #install_nix
 #install_tools
+install_python
 #install_tools_adjustments
 #link_dotfiles
 
