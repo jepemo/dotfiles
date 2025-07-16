@@ -101,6 +101,7 @@ alias zxc-co='git branch | fzf | xargs git checkout'
 
 # Ubuntu FIXES {{{
 alias fix-ubuntu-reset-sound="pulseaudio -k && sudo alsa force-reload"
+alias fix-claude="rm -rf /Users/jepemo/.asdf/installs/nodejs/20.12.0/lib/node_modules/@anthropic-ai/claude-code && npm cache clean --force && npm install -g @anthropic-ai/claude-code"
 # }}}
 
 # MacOsX Portability tools {{{
