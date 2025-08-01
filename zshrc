@@ -99,15 +99,21 @@ alias zxc-close='git branch | fzf | xargs git branch -D'
 alias zxc-co='git branch | fzf | xargs git checkout'
 # }}}
 
-# Ubuntu FIXES {{{
+# FIXES {{{
 alias fix-ubuntu-reset-sound="pulseaudio -k && sudo alsa force-reload"
 alias fix-claude="rm -rf /Users/jepemo/.asdf/installs/nodejs/20.12.0/lib/node_modules/@anthropic-ai/claude-code && npm cache clean --force && npm install -g @anthropic-ai/claude-code"
+# }}}
+
+# MyStuFF {{{
+alias mj="mystuff journal edit"
+alias ms="mystuff sync run --verbose"
 # }}}
 
 # MacOsX Portability tools {{{
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias strace='sudo dtruss'
   alias ldd='otool -L'
+  export MYSTUFF_HOME=/Users/jepemo/.mystuff
 fi
 # }}}
 
