@@ -77,7 +77,7 @@ alias qqq="cd ~/.dotfiles && git add . && git commit -a && git pull origin maste
 # ----
 alias v=$VISUAL
 alias vim=$VISUAL
-alias ls="exa -Fh --color=auto"
+alias ls="eza"
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
